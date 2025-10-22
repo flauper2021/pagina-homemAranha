@@ -38,3 +38,41 @@ body::before {
     vertical-align: middle;
     margin: 0 1.2rem;
 }
+
+.s-container {
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;    
+}
+
+.s-card {
+    border: .5rem solid #ffffff;
+    width: calc(100% / 3 - 8%);
+    height: 70vh;
+    position: relative;
+}
+
+.s-card__background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 1;
+}
+
+.s-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+}
+
+.s-card__tilte {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
