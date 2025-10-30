@@ -1,4 +1,8 @@
 @import url('./reset.css');
+@import url('./componets/_navigator.css');
+@import url('./componets/_pills.css');
+@import url('./componets/_link-button.css');
+@import url('./componets/_gallery.css');
 
 .s-wrapper {
     display:flex;
@@ -6,82 +10,70 @@
     height: 100vh;    
 }
 
+.s-wrapper video {
+    position: fixed;
+    width: 100%;   
+}
+
 .s-wrapper .s-left-column {
-    min-width: 10%;
-    height: 100%;
-    background-color: var(--tertiary-color);
+    width: 100px;
+    height: 100%;    
     display: flex;    
     justify-content: center;
     align-items: center;
+    position: fixed;
+    padding-right: 50px;
+    left: 0;
+    top: 0;
+    z-index: 1;
 }
 
 .s-wrapper .s-main-content {
     height: 100%;
-    width: 100%;
-    background-color: #808080;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;    
+    padding-left: 130px;
+    position: relative;
 }
 
-.navigator {
-    width: 100px;
+.s-wrapper .s-main-content__top{
     height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;    
+    justify-content: flex-start;
 }
 
-.navigator ul li {
-    margin: 60px 0;
+.swrapper .s-main-content__bottom{
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-.navigator ul li:first-child {
-    margin-top: 0;
+.s-wrapper .s-main-content .s-logo img {
+    margin-top: 1rem;
+    margin-left: 0;
+    margin-bottom: 30px;
+    max-width: 60%;
+} 
+
+.s-wrapper .s-main-content__top .s-description {
+    background-color: rgba(0, 0, 0, .7);
+    max-width: 50%;
+    padding: 1.25rem;
+    border-radius: .625rem;
 }
 
-.navigator ul li:last-child {
-    margin-bottom: 0;
-}
-
-.navigator ul li a {
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    text-align:center;
+.s-wrapper .s-main-content__top .s-description .s-description__text {
     color: var(--secondary-color);
-    border: 2px solid var(--secondary-color);
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    background-color: var(--tertiary-color);   
+    line-height: 170%;
+    text-align: justify;
 }
 
-.navigator::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 2px;
-    height: 100%;
-    background-color: var(--secondary-color);
-    z-index: 0;
+.s-wrapper .s-main-content__top .s-description .pills {
+    margin-bottom: 1.25rem;
 }
 
-.navigator ul { 
-    position: relative;
-    z-index: 1;        
-}
-
-.navigator li a:hover,
-.navigator li a.active {
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
-}
-
-.navigator__icon {    
-    position: absolute;
-    top: 0;
+.s-links {
+    margin-top: 1rem;
 }
 
