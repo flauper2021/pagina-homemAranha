@@ -13,14 +13,12 @@ JavaScript
 
 
 
-![Image](https://github.com/flauper2021/projeto-mundo-invertido/blob/main/assets/images/readmeImages/paginaUm.png) Imagem da pagina principal.
+![Image](https://github.com/flauper2021/pagina-homemAranha/blob/main/assets/image/pagina%20inicial.png) Imagem da pagina principal.
 
 
+[Link da Pagina](https://flauper2021.github.io/pagina-homemAranha/) Link para acessar a pagina demonstrativa github.
 
-![Image](https://github.com/flauper2021/projeto-mundo-invertido/blob/main/assets/images/readmeImages/paginaDois.png) Imagem da pagina invertida.
-
-
-[Link da Pagina](https://flauper2021.github.io/projeto-mundo-invertido/) Link para acessar a pagina.
+[link da pagina](https://pagina-homem-aranha.vercel.app/) Link para acessar a pagina no vercel.
 
 Grato por visitar meu Github.
 
