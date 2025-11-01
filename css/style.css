@@ -38,16 +38,17 @@ body::before {
 
 .s-container {
     position: relative;
-    display:flex;
+    display:flex;    
     align-items: center;
-    justify-content: space-evenly;    
+    justify-content: space-evenly;
+    perspective: 3000px;
 }
 
 .s-card {
     border: .5rem solid var(--secondary-color);
-    width: calc(100% / 3 - 8%);
+    width: 100%;
     height: 70vh;
-    position: relative;
+    position: absolute;
     transition: filter .5s ease-in-out;
 }
 
@@ -79,11 +80,13 @@ body::before {
 }
 
 .s-controller {
-    position: relative;
+    position: absolute;
     display: flex;
-    justify-content: center;
+    justify-content: center;    
     align-items: center;
     margin-top: 3rem;
+    bottom: 1.5rem;
+    width: 100%;
 }
 
 .s-controller__button {
@@ -107,9 +110,11 @@ body::before {
     margin: 0 3.5rem;
 }
 
-.s-controller__button:hover {
-    transform: scale(1.2);
-    border: .3rem solid var(--secondary-color);
+.s-controller__button--active {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: solid .1875rem var(--primary-color);
+    outline: solid .125rem var(--secondary-color);
 }
 
 .s-controller__line {
@@ -130,6 +135,18 @@ body::before {
     transform: scale(1.5);
     filter: drop-shadow(30px 10px 4px rgba(0, 0, 0, .5));
     transition: filter 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.s-card:nth-child(1) {
+    transform: rotatey(0deg) translateZ(50vw);
+}
+
+.s-card:nth-child(2) {
+    transform: rotatey(120deg) translateZ(50vw);
+}
+
+.s-card:nth-child(3) {
+    transform: rotatey(240deg) translateZ(50vw);
 }
 
 /* -- animação de fundo ao passar o mouse -- */
@@ -156,4 +173,14 @@ body[id^="spider-man-"] .s-card:not(.s-card--hovered) {
 
 .s-card--hovered .s-card__title {
     bottom: 50%;
+}
+
+/*-- animação do carrosel --*/
+
+.s-card-carousel {
+    display: flex;
+    justify-content: center;
+    width: calc(100vw / 3 - 10%);
+    transform-style: preserve-3d;
+    transition: transform .5s ease-in;
 }
